@@ -9,7 +9,7 @@
             string brand = Console.ReadLine();
             Console.Write("indtast bilmodel: ");
             string model = Console.ReadLine();
-            Console.Write("indast årgang: ");
+            Console.Write("indtast årgang: ");
             int year = Convert.ToInt32(Console.ReadLine());
             Console.Write("indtast geartypen (automatisk 'A' eller manuel 'M'): ");
             char gearType = Console.ReadLine()[0];
@@ -48,7 +48,10 @@
             String udskrift2 = string.Format("{0}{1}{2}\n\n{3}\n{4}{5}{6}", "Bilmærke".PadRight(10), "|Model".PadRight(10), "|Kilometertal".PadLeft(1), "".PadLeft(35, pad),
                 brand.PadRight(10), ("|" + model).PadRight(10), ("|" + kilometerstand).PadLeft(1));
             Console.WriteLine(udskrift2);
+
+            Console.WriteLine("Test123");
             Console.ReadLine();
+
         }
     }
 }
