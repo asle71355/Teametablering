@@ -26,6 +26,7 @@
             {
                 fuelprice = 13.49;
             }
+            Console.Write("");
 
             Console.Write("indtast km/L: ");
             double kmL = Convert.ToDouble(Console.ReadLine());
