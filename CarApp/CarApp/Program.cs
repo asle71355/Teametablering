@@ -5,13 +5,13 @@
         static void Main(string[] args)
         {
             //CarAPP
-            Console.Write("indast bilmærke: ");
+            Console.Write("indtast bilmærke: ");
             string brand = Console.ReadLine();
-            Console.Write("indast bilmodel: ");
+            Console.Write("indtast bilmodel: ");
             string model = Console.ReadLine();
             Console.Write("indast årgang: ");
             int year = Convert.ToInt32(Console.ReadLine());
-            Console.Write("indast geartypen (automatisk 'A' eller manuel 'M'): ");
+            Console.Write("indtast geartypen (automatisk 'A' eller manuel 'M'): ");
             char gearType = Console.ReadLine()[0];
             Console.Write("indtast brandstofstype (diesel 'D' eller benzin 'B': ");
             char fuelType = Console.ReadLine()[0];
