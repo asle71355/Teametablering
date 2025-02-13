@@ -9,7 +9,7 @@
             string brand = Console.ReadLine();
             Console.Write("indtast bilmodel: ");
             string model = Console.ReadLine();
-            Console.Write("indast årgang: ");
+            Console.Write("indtast årgang: ");
             int year = Convert.ToInt32(Console.ReadLine());
             Console.Write("indtast geartypen (automatisk 'A' eller manuel 'M'): ");
             char gearType = Console.ReadLine()[0];
