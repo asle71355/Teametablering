@@ -24,7 +24,7 @@
             }
             else
             {
-                fuelprice = 13.49;
+                fuelprice = 13.48;
             }
 
             Console.Write("indtast km/L: ");
