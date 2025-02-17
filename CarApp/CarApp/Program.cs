@@ -15,6 +15,7 @@
             char gearType = Console.ReadLine()[0];
             Console.Write("indtast brandstofstype (diesel 'D' eller benzin 'B': ");
             char fuelType = Console.ReadLine()[0];
+            //hej
 
             double fuelprice;
 
