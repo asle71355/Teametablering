@@ -1,21 +1,18 @@
-﻿namespace CarApp
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            //CarAPP
-            Console.Write("indtast bilmærke: ");
+﻿            //CarAPP
+            Console.Write("Indtast bilmærke: ");
             string brand = Console.ReadLine();
-            Console.Write("indtast bilmodel: ");
+            Console.Write("Indtast bilmodel: ");
             string model = Console.ReadLine();
-            Console.Write("indtast årgang: ");
+            Console.Write("Indtast årgang: ");
             int year = Convert.ToInt32(Console.ReadLine());
-            Console.Write("indtast geartypen (automatisk 'A' eller manuel 'M'): ");
+            Console.Write("Indtast geartypen (automatisk 'A' eller manuel 'M'): ");
             char gearType = Console.ReadLine()[0];
-            Console.Write("indtast brandstofstype (diesel 'D' eller benzin 'B': ");
+            Console.Write("Indtast brændstofstype (diesel 'D' eller benzin 'B': ");
             char fuelType = Console.ReadLine()[0];
-            //hej
+            
+            // I den første sektion har vi en blok at Write og Read kode. Vi vælger Write og ikke WriteLine fordi vi vil
+            // holde det på samme linje. 
+            // Vi definerer variabler for alle input der kommer ind.
 
             double fuelprice;
 
@@ -29,16 +26,27 @@
             }
             Console.Write("");
 
-            Console.Write("indtast km/L: ");
+            // Her har vi defineret brændstoftypernes forskellige priser, så det er afgørende for den samlede pris, hvilken type
+            // brændstof som bilen kører på.
+            // Det har vi gjort med en forgrening - en if/else statement. Det har vi gjort simpelt, så i stedet for at skrive
+            // begge udfald, ved vi bare, at hvis det ikke er diesel, så er det automatisk benzin.
+
+            Console.Write("Indtast km/L: ");
             double kmL = Convert.ToDouble(Console.ReadLine());
-            Console.Write("indtast kilomerstand: ");
+            Console.Write("Indtast kilometerstand: ");
             int kilometerstand = Convert.ToInt32(Console.ReadLine());
-            Console.Write("hvor lang er din tur i km: ");
+            Console.Write("Hvor lang er din tur i km?: ");
             double kmDriven = Convert.ToDouble(Console.ReadLine());
 
-            double fuelneded = kmDriven / kmL;
-            double tripCost = fuelneded * fuelprice;
+            // Her bliver der defineret vores variabler som vi kan bruge til vores udregning af turens pris.
+
+            double fuelneeded = kmDriven / kmL;
+            double tripCost = fuelneeded * fuelprice;
             kilometerstand += Convert.ToInt32(kmDriven);
+
+            // Nu hvor vi har fået en masse værdier ind i vores variabler, regner vi her med de forskellige variabler,
+            // med brug af operatorer, for at finde ud af brændstofsforbruget og prisen på turen.
+            // Disse to nye værdier definerer vi med det samme, som nye variabler.
 
             Console.WriteLine(brand + " " + model + " fra " + year + " har gear: " + gearType + "\nhar brandstofstypen: " + fuelType +
                 " nye kilometerstand: " + kilometerstand + " pris for brandstof brugt på turen: " + tripCost);
@@ -50,9 +58,7 @@
                 brand.PadRight(10), ("|" + model).PadRight(10), ("|" + kilometerstand).PadLeft(1));
             Console.WriteLine(udskrift2);
 
-            Console.WriteLine("Test123");
-            Console.ReadLine();
-
-        }
-    }
-}
+            // Til sidst skal vi bruge Console.WriteLine for at udskriver alle vores variabler som facit på vores beregninger.
+            // Vi bruger en string for at udskrive vores variabler for afstand og pris på turen.
+            // Til sidst laver vi tabellen med en oversigt over tre af vores variabler - bilmærke, model og kilometerstand.
+            // Vi laver tabellen med PadLeft og PadRight for at kunne lave vores opsætning af tabellen.
